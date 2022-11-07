@@ -6,6 +6,9 @@ A library containing utilities for typescript.
 
 ## Content
 
+-   [ModifyTypeOfProperty](#ModifyTypeOfProperty)
+-   [isNonNilObject](#isNonNilObject)
+
 ### ModifyTypeOfProperty
 
 Modifies the type of **existing** properties.
@@ -38,6 +41,17 @@ type ModA = ModifyTypeOfProperty<A, { c: number }>
 Error:
 TS2559: Type '{ c: number; }' has no properties in common with type 'Partial{ a: unknown; b: unknown; }>'.
  */
+```
+
+### isNonNilObject
+
+Checks if value is of type 'object' and not (null or undefined)
+
+```typescript
+const a: {} | null | undefined = {}
+if (isNonNilObject(a)) {
+	// type: a: Record<string, unknown>
+}
 ```
 
 ## Development
