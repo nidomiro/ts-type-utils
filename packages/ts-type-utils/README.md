@@ -1,5 +1,7 @@
 # ts-type-utils
 
+[![npm version](https://badge.fury.io/js/@nidomiro%2Fts-type-utils.svg)](https://www.npmjs.com/package/@nidomiro/ts-type-utils)
+
 A library containing utilities for typescript.
 
 ## Content
