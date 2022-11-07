@@ -1,0 +1,41 @@
+{
+	"name": "ts-type-utils",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/ts-type-utils/src",
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "@nrwl/js:tsc",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/packages/ts-type-utils",
+				"main": "packages/ts-type-utils/src/index.ts",
+				"tsConfig": "packages/ts-type-utils/tsconfig.lib.json",
+				"assets": ["packages/ts-type-utils/*.md"]
+			}
+		},
+		"publish": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "node tools/scripts/publish.mjs ts-type-utils {args.ver} {args.tag}"
+			},
+			"dependsOn": ["build"]
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["packages/ts-type-utils/**/*.ts"]
+			}
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "packages/ts-type-utils/jest.config.ts",
+				"passWithNoTests": true
+			}
+		}
+	},
+	"tags": []
+}
