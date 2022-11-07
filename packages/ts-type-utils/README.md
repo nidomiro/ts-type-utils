@@ -19,10 +19,10 @@ type A = {
 }
 type ModA = ModifyTypeOfProperty<A, { b: number }>
 /*
-ModA =	{
-			a: string,
-			b: number,
-		}
+ModA = {
+    a: string,
+	b: number,
+}
  */
 ```
 

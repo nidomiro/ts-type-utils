@@ -1,5 +1,27 @@
 {
 	"name": "@nidomiro/ts-type-utils",
 	"version": "0.0.1",
-	"type": "commonjs"
+	"type": "commonjs",
+	"private": false,
+	"license": "MIT",
+	"author": {
+		"name": "Niclas Roßberger",
+		"url": "https://nidomiro.de"
+	},
+	"bugs": {
+		"url": "https://github.com/nidomiro/ts-type-utils/issues"
+	},
+	"homepage": "https://github.com/nidomiro/ts-type-utils/tree/main/packages/config-helper",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nidomiro/ts-type-utils.git",
+		"directory": "packages/ts-type-utils"
+	},
+	"keywords": [
+		"typescript",
+		"util",
+		"type",
+		"ts",
+		"helper"
+	]
 }
